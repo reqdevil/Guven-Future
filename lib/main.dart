@@ -1,3 +1,7 @@
+import 'package:guven_future/Pages/HomePage.dart';
+import 'package:guven_future/Pages/SplashScreen.dart';
+import 'package:guven_future/Services/RouterService.dart';
+import 'package:guven_future/Utilities/Routes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,6 +19,8 @@ class App extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      onGenerateRoute: RouterService.generateRoute,
+      initialRoute: SPLASH_SCREEN,
       home: const SplashScreen(),
     );
   }
