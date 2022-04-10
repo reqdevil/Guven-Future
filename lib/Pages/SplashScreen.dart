@@ -1,5 +1,4 @@
 // ignore_for_file: file_names
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:guven_future/Utilities/AppColors.dart';
 import 'package:guven_future/Utilities/Constants.dart';
@@ -61,28 +60,22 @@ class _SplashScreenState extends State<SplashScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(bottom: 25.33),
-                child: AnimatedOpacity(
-                  curve: Curves.easeInOut,
-                  opacity: _visible ? 1.0 : 0.0,
-                  duration: const Duration(seconds: 2),
-                  child: Container(
-                    height: 150,
-                    color: AppColors.white,
-                  ),
+              AnimatedOpacity(
+                curve: Curves.easeInOut,
+                opacity: _visible ? 1.0 : 0.0,
+                duration: const Duration(seconds: 2),
+                child: const SizedBox(
+                  height: 150,
+                  child: Image(
+                      image: ExactAssetImage('assets/GuvenFutureLogo.png')),
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.only(left: 43, right: 43),
-                child: Text(
-                  'Hoşgeldiniz',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 36,
-                    fontFamily: 'Roboto',
-                    fontWeight: FontWeight.w300,
-                  ),
+              const Text(
+                'Hoşgeldiniz',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
                 ),
               ),
             ],

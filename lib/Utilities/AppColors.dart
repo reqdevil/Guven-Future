@@ -6,14 +6,19 @@ bool isDarkTheme = false;
 class AppColors {
   // App Colors
   static const Color mainColor = Color(0xFF253085);
+  static const Color panel = Color(0xFF6475B8);
 
   static Color menuGradientTop = parseColor('#46579F');
   static Color menuGradientBottom = parseColor('#8393D4');
+
+  static const Color cardBackground1 = Color(0xFFAEB6C8);
+  static const Color cardBackground2 = Color(0xFF222D56);
 
   // Classic Colors
   static const Color black = Colors.black;
   static const Color white = Colors.white;
   static const Color transparent = Colors.transparent;
+  static const Color grey = Colors.grey;
 
   static Color parseColor(String color) {
     String hex = color.replaceAll("#", "");
